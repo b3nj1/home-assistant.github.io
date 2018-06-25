@@ -50,10 +50,15 @@ command_topic:
   required: true
   type: string
 qos:
-  description: The maximum QoS level of the state topic.
+  description: The maximum QoS level of the state and command topics.
   required: false
   type: integer
   default: 0
+retain:
+  description: The MQTT retain option for the command topic.
+  required: false
+  type: boolean
+  default: false
 payload_disarm:
   description: The payload to disarm your Alarm Panel.
   required: false
